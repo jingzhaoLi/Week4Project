@@ -17,10 +17,7 @@ router.get('/newItem/:TV/:quantity/:price',function(req,res){
     res.send(db);
 })
 router.get('/listALLItems',function (req,res) {
-    // db.forEach(element => {
-    //     let cost=element.quantity * element.price;
-    //     db.costs=cost;
-    // });
+ 
     let data=generateList(db);
     let description="id"+"&emsp;"+"name"+"&emsp;"+"quantity"+"&emsp;"+"price"+"&emsp;"+"cost"+"</br>";
     res.send(description+data);
